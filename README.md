@@ -21,9 +21,6 @@ branches, worktrees, diffs and merges all happen locally.
 Open `index.html` in a browser. There's nothing to install, build or serve:
 the page has no dependencies, scripts or external assets.
 
-Links whose URLs haven't been supplied yet point at `#todo-…` placeholder
-anchors. Search `index.html` for `#todo-` to fill them in.
-
 ## Layout
 
 | Path         | What it is                                                       |
