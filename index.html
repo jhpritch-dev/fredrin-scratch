@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John Pritchard — AI infrastructure engineer</title>
+  <meta name="description" content="John Pritchard, AI infrastructure engineer in Gainesville, Florida. I build systems that run AI on hardware you own.">
+  <style>
+    :root {
+      --bg: #fbfaf7;
+      --fg: #1d1d1f;
+      --muted: #5c5c63;
+      --rule: #e3e1db;
+      --accent: #1f5f8b;
+      --chip: #f0eee8;
+      color-scheme: light dark;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #131416;
+        --fg: #ececee;
+        --muted: #a3a3ab;
+        --rule: #2c2d31;
+        --accent: #7fb8e0;
+        --chip: #1f2024;
+      }
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+      line-height: 1.65;
+      overflow-wrap: break-word;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: clamp(2.5rem, 6vw, 5rem) 1.25rem 3rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    /* Header */
+    .masthead {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 1.6rem + 2.4vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 0.75rem;
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+
+    .meta li + li::before {
+      content: "·";
+      margin-right: 0.75rem;
+    }
+
+    .tagline {
+      margin: 1.25rem 0 0;
+      font-size: clamp(1.15rem, 1.05rem + 0.6vw, 1.4rem);
+      line-height: 1.4;
+    }
+
+    /* Sections */
+    section {
+      padding: 2.25rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section h2 {
+      margin: 0 0 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    section h3 {
+      margin: 1.75rem 0 0.5rem;
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+
+    section h2 + h3 {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    li:last-child,
+    p:last-child,
+    ul:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Link rows: project links and contact links */
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.25rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .links li {
+      margin: 0;
+    }
+
+    .links a {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: var(--chip);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .contact dt {
+      font-weight: 600;
+    }
+
+    .contact dd {
+      margin: 0 0 1rem;
+    }
+
+    .contact dd:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact .links {
+      margin-top: 0.25rem;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding-top: 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .site-footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <h1>John Pritchard</h1>
+      <ul class="meta">
+        <li>AI infrastructure engineer</li>
+        <li>Gainesville, Florida</li>
+      </ul>
+      <p class="tagline">I build systems that run AI on hardware you own.</p>
+    </header>
+
+    <main>
+      <section id="shipped" aria-labelledby="shipped-heading">
+        <h2 id="shipped-heading">What I've shipped</h2>
+
+        <h3>BIFROST / RAMEAU</h3>
+        <p>A multi-model AI inference platform I designed, built, and operate solo.</p>
+        <ul>
+          <li>Three nodes, six local inference endpoints, a Kubernetes control plane.</li>
+          <li>A complexity classifier routes each request to the smallest model tier that can handle it.</li>
+          <li>LangGraph agents decompose tasks into parallel subtasks and call tools.</li>
+          <li>A six-level verification harness gates every output before it ships. The six levels are: parse, schema, lint, semantic embedding, unit test, integration.</li>
+        </ul>
+        <p>It sustains roughly 5 million local inference tokens per day at zero cloud inference cost, and runs fully air-gapped when it needs to: no egress, no provider in the loop. RAMEAU is the containerized Apache-2.0 release of that platform, built for on-premises deployment in environments where data can't leave the building.</p>
+        <!-- TODO: replace the #todo-* placeholder targets with real URLs. -->
+        <ul class="links" aria-label="BIFROST / RAMEAU links">
+          <li><a href="#todo-demo-url">Watch the demo</a></li>
+          <li><a href="#todo-benchmarks-url">Benchmarks</a></li>
+          <li><a href="#todo-code-url">Code</a></li>
+        </ul>
+
+        <h3>Other production systems</h3>
+        <ul>
+          <li>A 27-endpoint document-generation service on an 8-container stack, running in production with zero cloud dependencies.</li>
+          <li>A self-hosted private cloud on 10 TB of software-defined storage behind a WireGuard mesh, with 99.9% uptime over three years.</li>
+        </ul>
+      </section>
+
+      <section id="how-i-work" aria-labelledby="how-i-work-heading">
+        <h2 id="how-i-work-heading">How I work</h2>
+        <p>I build with coding agents as my default mode, not as an experiment. Agents are dispatched in parallel, each on its own branch and session, against a codebase I deliberately made agent-ready:</p>
+        <ul>
+          <li>A written ruleset derived from real failures</li>
+          <li>A dispatch journal so agent work stays auditable</li>
+          <li>Protected-file conventions</li>
+          <li>Verification gates that run before anything merges</li>
+        </ul>
+        <p>The governance is the interesting part. Running agents is easy. Running them so you can trust what comes out is the actual work.</p>
+      </section>
+
+      <section id="background" aria-labelledby="background-heading">
+        <h2 id="background-heading">Background</h2>
+        <ul>
+          <li>Thirty years maintaining the embedded control systems inside pipe organs: relay logic, low-voltage switching, electromechanical integration.</li>
+          <li>A doctorate in music.</li>
+          <li>Years teaching at two universities.</li>
+          <li>Learned BASIC on a VIC-20 in 1984, and came back to building when local models got good enough that one person could ship real infrastructure again.</li>
+        </ul>
+        <p>That path means I think about systems the way a researcher approaches an experiment: rigorous documentation, disciplined iteration, honest failure analysis. It also means I can explain a technical system to someone who doesn't share my vocabulary, which turns out to matter more than it should.</p>
+      </section>
+
+      <section id="reach-me" aria-labelledby="reach-me-heading">
+        <h2 id="reach-me-heading">Reach me</h2>
+        <dl class="contact">
+          <dt>Email</dt>
+          <dd><a href="mailto:jhpritch@hotmail.com">jhpritch@hotmail.com</a></dd>
+          <dt>Links</dt>
+          <dd>
+            <!-- TODO: replace the #todo-* placeholder targets with real URLs. -->
+            <ul class="links">
+              <li><a href="#todo-github-url">GitHub</a></li>
+              <li><a href="#todo-linkedin-url">LinkedIn</a></li>
+              <li><a href="https://rawmark.io">rawmark.io</a></li>
+            </ul>
+          </dd>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built with Fredrin.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,9 +1,8 @@
 # Fredrin scratch
 
 A scratch project created with [Fredrin](https://fredrin.com), used for trying
-out tickets and Workers. It has no application code yet: the repository holds
-only this README, [`AGENTS.md`](AGENTS.md) (conventions for AI coding agents)
-and a `.gitignore`.
+out tickets and Workers. It holds a single static page, `index.html`: an About
+Me page for John Pritchard, written in plain HTML and CSS with no build step.
 
 ## Install
 
@@ -19,15 +18,18 @@ branches, worktrees, diffs and merges all happen locally.
 
 ## Run locally
 
-There's nothing to run yet, because the project has no build, test or start
-commands. When code lands, add its commands here and in the **Commands**
-section of [`AGENTS.md`](AGENTS.md).
+Open `index.html` in a browser. There's nothing to install, build or serve:
+the page has no dependencies, scripts or external assets.
+
+Links whose URLs haven't been supplied yet point at `#todo-…` placeholder
+anchors. Search `index.html` for `#todo-` to fill them in.
 
 ## Layout
 
 | Path         | What it is                                                       |
 | ------------ | ---------------------------------------------------------------- |
+| `index.html` | The About Me page: markup and inline CSS in one file.            |
 | `README.md`  | This file.                                                       |
-| `AGENTS.md`  | Instructions for AI coding agents. It's a stub for now.          |
+| `AGENTS.md`  | Instructions for AI coding agents.                               |
 | `.gitignore` | Ignores dependencies, secrets, build output and editor files.    |
 | `.fredrin/`  | Fredrin's machine-local tool state. It's ignored and never committed. |

@@ -4,16 +4,21 @@ Conventions for AI coding agents working in **Fredrin scratch**. This file is th
 canonical entry point under the [AGENTS.md](https://agents.md) standard, and it
 is the first thing a Fredrin Worker reads.
 
-It is a stub — the first ticket on the board fills it in.
-
 ## Project
 
-_What is this, in a sentence or two?_
+A static About Me page for John Pritchard, AI infrastructure engineer. The whole
+site is `index.html`: semantic HTML with inline CSS, no JavaScript and no
+external assets.
 
 ## Commands
 
-_How do you run it, test it, and build it?_
+- **Run:** open `index.html` in a browser.
+- **Build / test:** none. There are no dependencies and no build step.
 
 ## Conventions
 
-_Anything a new contributor would get wrong on their first try._
+- The page copy comes from the human and is the source of truth. Don't reword
+  it, and preserve every figure exactly.
+- Links without a real URL use `#todo-<name>-url` placeholder anchors. Never
+  invent a URL for them.
+- Keep the page dependency-free: no frameworks, web fonts or CDN assets.
