@@ -4,22 +4,28 @@ A scratch project created with [Fredrin](https://fredrin.com), used for trying
 out tickets and Workers. It holds a single static page, `index.html`: an About
 Me page for John Pritchard, written in plain HTML and CSS with no build step.
 
+**[View the About Me page →](https://jhpritch-dev.github.io/fredrin-scratch/)**
+It's published with GitHub Pages from `index.html` on `main`.
+
 ## Install
 
 Nothing needs installing. Clone or open the repository and you're done:
 
 ```sh
-git clone <path-to-fredrin-scratch>
+git clone https://github.com/jhpritch-dev/fredrin-scratch.git
 cd fredrin-scratch
 ```
-
-The project runs on local git. It has no remote and doesn't need one, since
-branches, worktrees, diffs and merges all happen locally.
 
 ## Run locally
 
 Open `index.html` in a browser. There's nothing to install, build or serve:
 the page has no dependencies, scripts or external assets.
+
+## Publish
+
+GitHub Pages serves the root of `main` at
+<https://jhpritch-dev.github.io/fredrin-scratch/>. Merging to `main` republishes
+the page within a minute or two; there's no separate deploy step.
 
 ## Layout
 

@@ -13,6 +13,8 @@ external assets.
 ## Commands
 
 - **Run:** open `index.html` in a browser.
+- **Publish:** merge to `main`. GitHub Pages serves the repo root at
+  <https://jhpritch-dev.github.io/fredrin-scratch/>.
 - **Build / test:** none. There are no dependencies and no build step.
 
 ## Conventions
@@ -22,3 +24,5 @@ external assets.
 - Links without a real URL use `#todo-<name>-url` placeholder anchors. Never
   invent a URL for them.
 - Keep the page dependency-free: no frameworks, web fonts or CDN assets.
+- Keep `index.html` at the repo root. GitHub Pages publishes it from there, so
+  moving or renaming it takes the live page down.
