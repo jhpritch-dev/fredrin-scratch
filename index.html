@@ -221,12 +221,12 @@
         <h3>BIFROST / RAMEAU</h3>
         <p>A multi-model AI inference platform I designed, built, and operate solo.</p>
         <ul>
-          <li>Three nodes, six local inference endpoints, a Kubernetes control plane.</li>
+          <li>Three nodes, twelve local routing tiers, a Kubernetes control plane.</li>
           <li>A complexity classifier routes each request to the smallest model tier that can handle it.</li>
           <li>LangGraph agents decompose tasks into parallel subtasks and call tools.</li>
-          <li>A six-level verification harness gates every output before it ships. The six levels are: parse, schema, lint, semantic embedding, unit test, integration.</li>
+          <li>A tiered verification harness gates every output before it ships: emptiness and refusal checks, stub detection, acceptance-criteria coverage, semantic-embedding drift, and a blocking sandboxed unit-test gate, with an advisory compile check on the assembled result. Only the unit-test gate blocks; a failure there escalates with its evidence attached.</li>
         </ul>
-        <p>It sustains roughly 5 million local inference tokens per day at zero cloud inference cost, and runs fully air-gapped when it needs to: no egress, no provider in the loop. RAMEAU is the containerized Apache-2.0 release of that platform, built for on-premises deployment in environments where data can't leave the building.</p>
+        <p>Over a measured 30-day window it moved 33.9 million tokens &mdash; a median of about 408,000 a day, peaking at 5.3 million on its busiest day. Local hardware carried 69% of that volume; most of the remainder ran on free-tier provider-hosted models, which held metered inference spend for the entire window to about six cents. It also supports a fully offline routing mode that drops every provider tier, for environments where nothing may leave the building. RAMEAU will be the containerized Apache-2.0 release of that platform, built for on-premises deployment.</p>
         <ul class="links" aria-label="BIFROST / RAMEAU links">
           <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7514363947060203520/">Watch the demo</a></li>
           <li><a href="https://rawmark.io">Benchmarks</a></li>
